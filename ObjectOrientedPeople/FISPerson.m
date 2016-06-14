@@ -22,24 +22,11 @@
 @implementation FISPerson
 
 - (instancetype)init {
-    if (self) {
-        _name = @"name";
-        _ageInYears = 1;
-        _heightInInches = 10;
-        _skills = [[NSMutableArray alloc] init];
-    }
-    return self;
+    return [self initWithName:@"name" ageInYears:1 heightInInches:10];
 }
 
 - (instancetype)initWithName:(NSString *)name ageInYears:(NSUInteger )year {
-    self = [super init];
-    if (self) {
-        _name = name;
-        _ageInYears = year;
-        _heightInInches = 20;
-        _skills = [[NSMutableArray alloc] init];
-    }
-    return self;
+    return [self initWithName:name ageInYears:year heightInInches:10];
 }
 
 - (instancetype)initWithName:(NSString *)name ageInYears:(NSUInteger )year heightInInches:(NSUInteger )height {
